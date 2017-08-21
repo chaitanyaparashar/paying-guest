@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.3.1_319bf65e1c6f827e32ade05255986969b66b47c8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.3.1_3b6035e7372bce6b74332244309f9d316ffefb0d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.3.1_c14b7612a2d146da4d97eac83789e63b0c6ddabb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.1_c2ffdf118a92f2a5a8d15e92588b86f6aba0ca67.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.3.1_461edd5911d4d96be11704b4b94e1cd6300a3827.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.3.1_b1bf93b4739bc080f2a40eae7ad780de105336df.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.3.1_4f156080020bd27b275e7b41af2b946d069c0934.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.3.1_b756abbc1a29ccc1edeed8f17f4d2883c8946120.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\exploded-aar\com.android.support\transition\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.3.1_bcbde5bfb665038132627223159f59010c862824.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.3.1_681b90974a6f338631e3a5b953f416a6e3113bdc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\exploded-aar\com.android.support\design\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\pre-dexed\debug\com.android.support-design-25.3.1_c2bb2116c64d7f991927928d922c78b2267f1cbe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.3.1_9d8c58b745ffd240db5902108b31bf24f5fd0217.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.3.1_904e077901780adc3599a1808cc4bed26bbba54b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.3.1_825b71f4320b6b3e12742348920e4a81f634792b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1108575c7dc7b7f5b378b3290ac90de81a9b8830">
+        <dex dex="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-25.0.1_82ca58e55b4a476a3c6289c8f9a8d50c755e7962.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1108575c7dc7b7f5b378b3290ac90de81a9b8830">
+        <dex dex="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-25.0.1_627f28bda0f14bfe289a5a4db223c3caf2fe29dd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.3.1_c670fab1544769fca60a94b83da75ac80460fa3b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.3.1_a500baec3bf4c8a16b12f62ea12877a51f1cb5f2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\exploded-aar\com.android.support\design\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\pre-dexed\debug\com.android.support-design-25.3.1_373f9c9c9ed885aeeff710e9f49105c6c5084c31.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.3.1_1ef439ecde99e9a2bd43af5942727290a65ba379.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.3.1_acc421b6f41c8a16b8756c4b120101978798e29f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.3.1_0976ecf15fa5b492837a75fe0705b851d8bb5099.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.3.1_90e3876cb464e8c70f5d02dc71837fcdd92664d2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.3.1_1aecca491fae593c41a37dddd591571495ef4dc8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\chaitanya\Desktop\Pg\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.3.1_f3ff7579c95cdf079527e1e50629c89a433299a4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\exploded-aar\com.android.support\transition\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.3.1_d476a648e4e216ee9a423ea23e230392b3de56af.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.3.1_720d4cb47b2757adc0643cab44bf2aa8eac5230f.jar" />
+    </item>
+
+</items>

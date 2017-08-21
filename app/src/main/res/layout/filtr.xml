@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Price Range"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        />
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/cardview1"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    card_view:cardElevation="5dp"
+    android:layout_margin="6dp"
+    card_view:cardBackgroundColor="#FFF"
+    card_view:cardCornerRadius="7dp"
+    card_view:cardMaxElevation="5dp">
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/seekBar" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/percent"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        />
+</android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Accomodation"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        />
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools"
+        android:id="@+id/cardview2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        card_view:cardElevation="5dp"
+        android:layout_margin="6dp"
+        card_view:cardBackgroundColor="#FFF"
+        card_view:cardCornerRadius="7dp"
+        card_view:cardMaxElevation="5dp">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_marginTop="15dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+           />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Food"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        />
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools"
+        android:id="@+id/cardview3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        card_view:cardElevation="5dp"
+        android:layout_margin="6dp"
+        card_view:cardBackgroundColor="#FFF"
+        card_view:cardCornerRadius="7dp"
+        card_view:cardMaxElevation="5dp">
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:id="@+id/rb1"
+    android:orientation="horizontal"
+    android:layout_marginLeft="10dp"
+    android:weightSum="1"
+    >
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="With Food"
+        android:layout_weight="0.5"
+        />
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:text="Without Food"
+        android:layout_weight="0.5"/>
+
+</RadioGroup>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

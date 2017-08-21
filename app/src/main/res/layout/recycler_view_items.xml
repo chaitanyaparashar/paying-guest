@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/cardview1"
+    android:layout_width="match_parent"
+    android:layout_height="325dp"
+    card_view:cardElevation="5dp"
+    android:layout_margin="6dp"
+    card_view:cardBackgroundColor="#FFF"
+    card_view:cardCornerRadius="7dp"
+    card_view:cardMaxElevation="5dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:text="Pg name"
+        android:gravity="center"
+        android:textSize="35dp"
+        android:elevation="2dp"
+        android:background="#5e92f3"
+        />
+
+    <ImageView
+        android:id="@+id/imgview1"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:elevation="2dp"
+        android:background="#EEEEEE"
+        android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tx1"
+                android:text="Location:-"
+                android:textStyle="italic"
+                android:textColor="#000000"
+                android:padding="16dp"
+                android:textSize="18dp"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.50" />
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="25dp"
+            android:background="#BDBDBD"
+            />
+        <TextView
+            android:id="@+id/tx2"
+            android:text="      Price:-"
+            android:textColor="#000000"
+            android:textStyle="italic"
+            android:textSize="18dp"
+            android:padding="16dp"
+            android:layout_below="@id/imgview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.50" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

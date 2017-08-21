@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/srt"
+        android:icon="@drawable/srt"
+        android:title="Text to be seen by user"
+        app:showAsAction="always"
+        android:orderInCategory="1"/>
+    <item
+        android:id="@+id/action_name"
+        android:icon="@drawable/fil"
+        android:title="Text to be seen by user"
+        app:showAsAction="always"
+        android:orderInCategory="2"/>
+
+</menu>
