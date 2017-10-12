@@ -2,6 +2,7 @@ package com.example.chaitanya.pg;
 
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -20,16 +21,22 @@ import org.w3c.dom.Text;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
 
-    String[] values;
-    Context context1;
-    Integer [] imag;
+    private String[] name;
+    private String[] address;
+    private String[] price;
+    private Bitmap[] imageid;
+    private Context context1;
     public ImageView img;
     TextView tx1;
     TextView tx2;
-    public RecyclerViewAdapter(Context context2,String[] values2,Integer[] imags){
+    TextView tx3;
+    public RecyclerViewAdapter(Context context2,String[] address,String[] price,String[] name,Bitmap[] imageid){
 
-        values = values2;
-        this.imag = imags;
+        this.name = name;
+        this.address = address;
+        this.price = price;
+        this.name = name;
+        this.imageid = imageid;
         context1 = context2;
     }
 
@@ -42,6 +49,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             img = (ImageView) v.findViewById(R.id.imgview1);
             tx1 = (TextView) v.findViewById(R.id.tx1);
             tx2 = (TextView) v.findViewById(R.id.tx2);
+            tx3 = (TextView) v.findViewById(R.id.tx3);
         }
     }
 
@@ -57,9 +65,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder Vholder,final int position){
-
-        img.setImageResource(imag[position]);
-
+        if(imageid[position] != null) {
+            img.setImageBitmap(imageid[position]);
+        }
+        else{
+            img.setImageResource(R.drawable.tyu);
+        }
+        tx1.setText(""+address[position]+"");
+        tx2.setText(""+price[position]+"");
+        tx3.setText(""+name[position]+"");
         Vholder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,9 +84,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
+    public int getItemViewType(int position) {
+        return position;
+    }
+
+    @Override
     public int getItemCount(){
 
-        return imag.length;
+        return name.length;
     }
 
 }

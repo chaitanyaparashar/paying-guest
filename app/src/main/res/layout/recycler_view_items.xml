@@ -11,9 +11,9 @@
     card_view:cardCornerRadius="7dp"
     card_view:cardMaxElevation="5dp">
     <TextView
+        android:id="@+id/tx3"
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:text="Pg name"
         android:gravity="center"
         android:textSize="35dp"
         android:elevation="2dp"
@@ -40,7 +40,6 @@
 
             <TextView
                 android:id="@+id/tx1"
-                android:text="Location:-"
                 android:textStyle="italic"
                 android:textColor="#000000"
                 android:padding="16dp"
@@ -56,7 +55,6 @@
             />
         <TextView
             android:id="@+id/tx2"
-            android:text="      Price:-"
             android:textColor="#000000"
             android:textStyle="italic"
             android:textSize="18dp"

@@ -183,6 +183,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\chaitanya\.gradle\caches\modules-2\files-2.1\org.jbundle.util.osgi.wrapped\org.jbundle.util.osgi.wrapped.org.apache.http.client\4.1.2\98c86e42679fe7ac066f6c242e0d14f0bce0bb7c\org.jbundle.util.osgi.wrapped.org.apache.http.client-4.1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="98c86e42679fe7ac066f6c242e0d14f0bce0bb7c">
+        <dex dex="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\pre-dexed\debug\org.jbundle.util.osgi.wrapped.org.apache.http.client-4.1.2_a7cd6e897dbc89f7987eb323c8f93a4360f6f662.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\chaitanya\Desktop\paying-guest\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"

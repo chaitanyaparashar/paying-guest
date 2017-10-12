@@ -1,12 +1,18 @@
 package com.example.chaitanya.pg;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,7 +22,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import org.apache.http.NameValuePair;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -24,17 +38,27 @@ public class MainActivity extends AppCompatActivity
     RecyclerView recyclerView;
 
     Context context;
-    String[] numbers;
     RecyclerViewAdapter recyclerView_Adapter;
+    private String name[];
+    private String address[];
+    private String price[];
+    private String accomodation[];
+    private String food[];
+    private String location[];
+    private String gender[];
+    private String ac[];
+    private String wifi[];
+    private String mobileno[];
+
+    JSONArray code;
+    Bitmap [] imageid;
+    private ProgressDialog pDialog;
+    Bitmap decodedByte;
+    JSONParser jParser = new JSONParser();
+
+    private static String url ="https://podgier-woman.000webhostapp.com/pgtable.php";
 
     RecyclerView.LayoutManager recyclerViewLayoutManager;
-
-    private Integer img[] = {
-            R.drawable.vbn,
-            R.drawable.ert,
-            R.drawable.asd,
-            R.drawable.tyu
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,19 +78,91 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         context = getApplicationContext();
-
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view1);
-
-        //Change 2 to your choice because here 2 is the number of Grid layout Columns in each row.
-        recyclerViewLayoutManager = new GridLayoutManager(context, 1);
-
-        recyclerView.setLayoutManager(recyclerViewLayoutManager);
-
-        recyclerView_Adapter = new RecyclerViewAdapter(context,numbers,img);
-
-        recyclerView.setAdapter(recyclerView_Adapter);
-
+        gro g1 = new gro();
+        g1.execute();
     }
+
+    class gro extends AsyncTask<String, String, String> {
+        protected void onPreExecute() {
+            super.onPreExecute();
+            pDialog = new ProgressDialog(MainActivity.this);
+            pDialog.setMessage("Please Wait....");
+            pDialog.setIndeterminate(false);
+            pDialog.setCancelable(false);
+            pDialog.show();
+        }
+
+        protected String doInBackground(String... args) {
+            java.util.List<NameValuePair> pr = new ArrayList<NameValuePair>();
+
+
+
+            JSONObject json = jParser.makeHttpRequest(url, "GET", pr);
+            Log.d("hhhhhhhhhhhhhhhhee"," "+json);
+            try {
+
+                code = json.getJSONArray("code");
+                name = new String[code.length()];
+                address = new String[code.length()];
+                price = new String[code.length()];
+                accomodation = new String[code.length()];
+                food = new String[code.length()];
+                location = new String[code.length()];
+                gender = new String[code.length()];
+                ac = new String[code.length()];
+                wifi = new String[code.length()];
+                mobileno = new String[code.length()];
+                imageid = new Bitmap[code.length()];
+
+                for (int i = 0; i < code.length(); i++) {
+                    JSONObject c = code.getJSONObject(i);
+                    //Log.d("codeeee "+i,c.toString());
+                    //Log.d("struat", c.getString("base64"));
+                    final String encodedString = c.getString("base64");
+                    name[i] = c.getString("name");
+                    address[i] = c.getString("address");
+                    price[i] = c.getString("price");
+                    accomodation[i] = c.getString("accomodation");
+                    food[i] = c.getString("food");
+                    location[i] = c.getString("location");
+                    gender[i] = c.getString("gender");
+                    ac[i] = c.getString("ac");
+                    wifi[i] = c.getString("wifi");
+                    mobileno[i] = c.getString("mobileno");
+
+                    final String pureBase64Encoded = encodedString.substring(encodedString.indexOf(",") + 1);
+                    byte[] decodedString = Base64.decode(pureBase64Encoded, Base64.DEFAULT);
+                    decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                    imageid[i] = decodedByte;
+
+
+                }
+
+
+
+            }catch(JSONException e){
+                Log.d("fjf","fgf"+e);
+            }
+            return null;
+        }
+
+        protected void onPostExecute(String file_url) {
+            pDialog.dismiss();
+            recyclerView = (RecyclerView) findViewById(R.id.recycler_view1);
+
+            //Change 2 to your choice because here 2 is the number of Grid layout Columns in each row.
+            recyclerViewLayoutManager = new GridLayoutManager(context, 1);
+
+            recyclerView.setLayoutManager(recyclerViewLayoutManager);
+
+            recyclerView_Adapter = new RecyclerViewAdapter(context,address,price,name,imageid);
+
+            recyclerView.setAdapter(recyclerView_Adapter);
+        }
+    }
+
+
+
 
     @Override
     public void onBackPressed() {
