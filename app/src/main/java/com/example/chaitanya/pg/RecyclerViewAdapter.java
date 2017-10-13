@@ -71,6 +71,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         else{
             img.setImageResource(R.drawable.tyu);
         }
+        MainActivity.countt = 1;
         tx1.setText(""+address[position]+"");
         tx2.setText(""+price[position]+"");
         tx3.setText(""+name[position]+"");

@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent" >
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -114,4 +121,106 @@
 
 </RadioGroup>
     </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pg for "
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        />
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools"
+        android:id="@+id/cardview4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        card_view:cardElevation="5dp"
+        android:layout_margin="6dp"
+        card_view:cardBackgroundColor="#FFF"
+        card_view:cardCornerRadius="7dp"
+        card_view:cardMaxElevation="5dp">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/cb1"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:weightSum="1"
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Boys"
+                android:layout_weight="0.5"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:text="Girls"
+                android:layout_weight="0.5"/>
+
+        </RadioGroup>
+    </android.support.v7.widget.CardView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Air Conditioner"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        />
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools"
+        android:id="@+id/cardview5"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        card_view:cardElevation="5dp"
+        android:layout_margin="6dp"
+        card_view:cardBackgroundColor="#FFF"
+        card_view:cardCornerRadius="7dp"
+        card_view:cardMaxElevation="5dp">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/db1"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:weightSum="1"
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="With ac"
+                android:layout_weight="0.5"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:text="Non-ac"
+                android:layout_weight="0.5"/>
+
+        </RadioGroup>
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Submit"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/mybutton"
+        />
 </LinearLayout>
+    </ScrollView>

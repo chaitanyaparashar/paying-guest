@@ -34,8 +34,10 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+   static int countt;
 
     RecyclerView recyclerView;
+    JSONArray cc;
 
     Context context;
     RecyclerViewAdapter recyclerView_Adapter;
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity
     Bitmap [] imageid;
     private ProgressDialog pDialog;
     Bitmap decodedByte;
+    String newcode;
     JSONParser jParser = new JSONParser();
 
     private static String url ="https://podgier-woman.000webhostapp.com/pgtable.php";
@@ -67,17 +70,26 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view1);
 
+        //Change 2 to your choice because here 2 is the number of Grid layout Columns in each row.
+        recyclerViewLayoutManager = new GridLayoutManager(context, 1);
+
+        recyclerView.setLayoutManager(recyclerViewLayoutManager);
+        if(countt != 1) {
+            countt = 0;
+        }
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+
         context = getApplicationContext();
+
         gro g1 = new gro();
         g1.execute();
     }
@@ -96,68 +108,105 @@ public class MainActivity extends AppCompatActivity
             java.util.List<NameValuePair> pr = new ArrayList<NameValuePair>();
 
 
-
             JSONObject json = jParser.makeHttpRequest(url, "GET", pr);
-            Log.d("hhhhhhhhhhhhhhhhee"," "+json);
+            Log.d("jaaaaaaaaaaaaaaaakkk",""+countt);
+            Log.d("hhhhhhhhhhhhhhhhee", " " + json);
             try {
+                if(countt == 1){
+                    Bundle b = getIntent().getExtras();
+                    newcode=b.getString("daattaa");
+                    Log.d("jaaaaaaaaaaaaaaaakkk",""+newcode);
+                }
 
-                code = json.getJSONArray("code");
-                name = new String[code.length()];
-                address = new String[code.length()];
-                price = new String[code.length()];
-                accomodation = new String[code.length()];
-                food = new String[code.length()];
-                location = new String[code.length()];
-                gender = new String[code.length()];
-                ac = new String[code.length()];
-                wifi = new String[code.length()];
-                mobileno = new String[code.length()];
-                imageid = new Bitmap[code.length()];
+                if (countt == 0) {
+                    code = json.getJSONArray("code");
+                    name = new String[code.length()];
+                    address = new String[code.length()];
+                    price = new String[code.length()];
+                    accomodation = new String[code.length()];
+                    food = new String[code.length()];
+                    location = new String[code.length()];
+                    gender = new String[code.length()];
+                    ac = new String[code.length()];
+                    wifi = new String[code.length()];
+                    mobileno = new String[code.length()];
+                    imageid = new Bitmap[code.length()];
 
-                for (int i = 0; i < code.length(); i++) {
-                    JSONObject c = code.getJSONObject(i);
-                    //Log.d("codeeee "+i,c.toString());
-                    //Log.d("struat", c.getString("base64"));
-                    final String encodedString = c.getString("base64");
-                    name[i] = c.getString("name");
-                    address[i] = c.getString("address");
-                    price[i] = c.getString("price");
-                    accomodation[i] = c.getString("accomodation");
-                    food[i] = c.getString("food");
-                    location[i] = c.getString("location");
-                    gender[i] = c.getString("gender");
-                    ac[i] = c.getString("ac");
-                    wifi[i] = c.getString("wifi");
-                    mobileno[i] = c.getString("mobileno");
+                    for (int i = 0; i < code.length(); i++) {
+                        JSONObject c = code.getJSONObject(i);
+                        //Log.d("codeeee "+i,c.toString());
+                        //Log.d("struat", c.getString("base64"));
+                        final String encodedString = c.getString("base64");
+                        name[i] = c.getString("name");
+                        address[i] = c.getString("address");
+                        price[i] = c.getString("price");
+                        accomodation[i] = c.getString("accomodation");
+                        food[i] = c.getString("food");
+                        location[i] = c.getString("location");
+                        gender[i] = c.getString("gender");
+                        ac[i] = c.getString("ac");
+                        wifi[i] = c.getString("wifi");
+                        mobileno[i] = c.getString("mobileno");
 
-                    final String pureBase64Encoded = encodedString.substring(encodedString.indexOf(",") + 1);
-                    byte[] decodedString = Base64.decode(pureBase64Encoded, Base64.DEFAULT);
-                    decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-                    imageid[i] = decodedByte;
+                        final String pureBase64Encoded = encodedString.substring(encodedString.indexOf(",") + 1);
+                        byte[] decodedString = Base64.decode(pureBase64Encoded, Base64.DEFAULT);
+                        decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                        imageid[i] = decodedByte;
+
+
+                    }
+                } else if(countt == 1 ){
+                    cc = new JSONArray(newcode);
+                    name = new String[cc.length()];
+                    address = new String[cc.length()];
+                    price = new String[cc.length()];
+                    accomodation = new String[cc.length()];
+                    food = new String[cc.length()];
+                    location = new String[cc.length()];
+                    gender = new String[cc.length()];
+                    ac = new String[cc.length()];
+                    wifi = new String[cc.length()];
+                    mobileno = new String[cc.length()];
+                    imageid = new Bitmap[cc.length()];
+
+                    for (int i = 0; i < cc.length(); i++) {
+                        JSONObject d = cc.getJSONObject(i);
+                        //Log.d("codeeee "+i,c.toString());
+                        //Log.d("struat", c.getString("base64"));
+                        final String encodedString = d.getString("base64");
+                        name[i] = d.getString("name");
+                        address[i] = d.getString("address");
+                        price[i] = d.getString("price");
+                        accomodation[i] = d.getString("accomodation");
+                        food[i] = d.getString("food");
+                        location[i] = d.getString("location");
+                        gender[i] = d.getString("gender");
+                        ac[i] = d.getString("ac");
+                        wifi[i] = d.getString("wifi");
+                        mobileno[i] = d.getString("mobileno");
+
+                        final String pureBase64Encoded = encodedString.substring(encodedString.indexOf(",") + 1);
+                        byte[] decodedString = Base64.decode(pureBase64Encoded, Base64.DEFAULT);
+                        decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                        imageid[i] = decodedByte;
+
+                    }
 
 
                 }
 
-
-
-            }catch(JSONException e){
-                Log.d("fjf","fgf"+e);
+            } catch (JSONException e) {
+                Log.d("fjf", "fgf" + e);
             }
             return null;
         }
 
         protected void onPostExecute(String file_url) {
             pDialog.dismiss();
-            recyclerView = (RecyclerView) findViewById(R.id.recycler_view1);
-
-            //Change 2 to your choice because here 2 is the number of Grid layout Columns in each row.
-            recyclerViewLayoutManager = new GridLayoutManager(context, 1);
-
-            recyclerView.setLayoutManager(recyclerViewLayoutManager);
-
-            recyclerView_Adapter = new RecyclerViewAdapter(context,address,price,name,imageid);
-
-            recyclerView.setAdapter(recyclerView_Adapter);
+                recyclerView_Adapter = new RecyclerViewAdapter(context, address, price, name, imageid);
+                recyclerView.invalidate();
+                recyclerView_Adapter.notifyDataSetChanged();
+                recyclerView.setAdapter(recyclerView_Adapter);
         }
     }
 
