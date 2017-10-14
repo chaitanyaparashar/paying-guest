@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.jaspreet.imageslider.MainActivity">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relative">
+
+            <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:id="@+id/viewPager"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Facilities"
+                android:textColor="@color/colorPrimary"
+                android:textAllCaps="true"
+                android:id="@+id/facilities"
+                android:layout_below="@+id/viewPager"
+                android:textColorHighlight="@color/colorPrimary"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RO,Fridge,box bed,wifi available,No entry after 10pm"
+                android:id="@+id/tvfacilities"
+                android:layout_below="@+id/facilities"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textColor="@color/colorPrimary"
+                android:textAllCaps="true"
+                android:id="@+id/price"
+                android:layout_below="@+id/tvfacilities"
+                android:textColorHighlight="@color/colorPrimary"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rs 4000"
+                android:id="@+id/tvprice"
+                android:layout_below="@+id/price"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Availability"
+                android:textColor="@color/colorPrimary"
+                android:textAllCaps="true"
+                android:id="@+id/availability"
+                android:layout_below="@+id/tvprice"
+                android:textColorHighlight="@color/colorPrimary"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2 seats"
+                android:id="@+id/tvavailabitily"
+                android:layout_below="@+id/availability"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Food"
+                android:textColor="@color/colorPrimary"
+                android:textAllCaps="true"
+                android:id="@+id/food"
+                android:layout_below="@+id/tvavailabitily"
+                android:textColorHighlight="@color/colorPrimary"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="without food"
+                android:id="@+id/tvfood"
+                android:layout_below="@+id/food"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Accomodation"
+                android:textColor="@color/colorPrimary"
+                android:textAllCaps="true"
+                android:id="@+id/accomodation"
+                android:layout_below="@+id/tvfood"
+                android:textColorHighlight="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact"
+                android:textColor="@color/colorPrimary"
+                android:textAllCaps="true"
+                android:id="@+id/contact"
+                android:layout_below="@+id/tvaccomodation"
+                android:textColorHighlight="@color/colorPrimary"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8437538555"
+                android:id="@+id/tvcontact"
+                android:layout_below="@+id/contact"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textColor="@color/colorPrimary"
+                android:textAllCaps="true"
+                android:id="@+id/address"
+                android:layout_below="@+id/tvcontact"
+                android:textColorHighlight="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2566,Sector 22-C,Chandigarh"
+                android:id="@+id/tvaddress"
+                android:layout_below="@+id/address"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/tvaddress"
+                android:padding="20dp"
+                android:weightSum="1">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/tyu"
+                    android:id="@+id/callbutton"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/tyu"
+                    android:id="@+id/mapbutton"
+                    android:layout_weight="0.5"
+                    android:layout_toRightOf="@+id/callbutton"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cooler and fan"
+                android:id="@+id/tvaccomodation"
+                android:layout_below="@+id/accomodation"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</ScrollView>

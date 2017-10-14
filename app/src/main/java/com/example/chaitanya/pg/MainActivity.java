@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity
     private String mobileno[];
 
     JSONArray code;
+    JSONArray code2;
     Bitmap [] imageid;
     private ProgressDialog pDialog;
     Bitmap decodedByte;
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity
     JSONParser jParser = new JSONParser();
 
     private static String url ="https://podgier-woman.000webhostapp.com/pgtable.php";
+    private static String url2 ="https://podgier-woman.000webhostapp.com/apptable.php";
 
     RecyclerView.LayoutManager recyclerViewLayoutManager;
 
@@ -109,6 +111,7 @@ public class MainActivity extends AppCompatActivity
 
 
             JSONObject json = jParser.makeHttpRequest(url, "GET", pr);
+            JSONObject json2 = jParser.makeHttpRequest(url2, "GET", pr);
             Log.d("jaaaaaaaaaaaaaaaakkk",""+countt);
             Log.d("hhhhhhhhhhhhhhhhee", " " + json);
             try {
@@ -120,6 +123,7 @@ public class MainActivity extends AppCompatActivity
 
                 if (countt == 0) {
                     code = json.getJSONArray("code");
+                    code2 = json2.getJSONArray("code");
                     name = new String[code.length()];
                     address = new String[code.length()];
                     price = new String[code.length()];
@@ -131,6 +135,7 @@ public class MainActivity extends AppCompatActivity
                     wifi = new String[code.length()];
                     mobileno = new String[code.length()];
                     imageid = new Bitmap[code.length()];
+                    Log.d("codeeee ",""+code2);
 
                     for (int i = 0; i < code.length(); i++) {
                         JSONObject c = code.getJSONObject(i);

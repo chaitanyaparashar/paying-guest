@@ -20,6 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".filtr"/>
+        <activity android:name=".Pgdata"/>
+        <activity android:name=".SwipeActivity"/>
     </application>
 
 </manifest>

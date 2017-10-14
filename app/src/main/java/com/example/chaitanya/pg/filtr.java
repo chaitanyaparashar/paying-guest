@@ -236,6 +236,7 @@ public class filtr extends AppCompatActivity implements SeekBar.OnSeekBarChangeL
                     Toast.makeText(getApplicationContext(),"Sorry no pg available as per your requirements",Toast.LENGTH_LONG).show();
             }
             else {
+                Toast.makeText(getApplicationContext(),"Please wait while your results are loading",Toast.LENGTH_LONG).show();
                 Intent intent_name = new Intent();
                 intent_name.setClass(getApplicationContext(), MainActivity.class);
                 Bundle b = new Bundle();
