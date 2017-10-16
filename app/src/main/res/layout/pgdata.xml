@@ -16,6 +16,25 @@
             android:layout_height="wrap_content"
             android:id="@+id/relative">
 
+            <Button
+                android:id="@+id/btt1"
+                android:background="@drawable/tprevoius"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="100dp" />
+
+            <Button
+                android:background="@drawable/tnext"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignTop="@+id/btt1"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/btt2" />
+
             <android.support.v4.view.ViewPager
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
