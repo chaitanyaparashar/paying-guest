@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
@@ -23,11 +24,11 @@ import java.io.ByteArrayOutputStream;
 
 public class MyCustomAdapter extends PagerAdapter {
     Context context;
-    Bitmap images;
+    Bitmap[] images;
     LayoutInflater layoutInflater;
 
 
-    public MyCustomAdapter(Context context, Bitmap images) {
+    public MyCustomAdapter(Context context, Bitmap[] images) {
         this.context = context;
         this.images = images;
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -35,12 +36,12 @@ public class MyCustomAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return 1;
+        return images.length;
     }
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return view == ((LinearLayout) object);
+        return view == ((RelativeLayout) object);
     }
 
     @Override
@@ -48,7 +49,7 @@ public class MyCustomAdapter extends PagerAdapter {
         View itemView = layoutInflater.inflate(R.layout.item, container, false);
 
         ImageView imageView = (ImageView) itemView.findViewById(R.id.imageView);
-        imageView.setImageBitmap(images);
+        imageView.setImageBitmap(images[position]);
 
         container.addView(itemView);
 
@@ -60,9 +61,19 @@ public class MyCustomAdapter extends PagerAdapter {
                 Intent i = new Intent(context, SwipeActivity.class);
                 // passing array index
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                images.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                images[0].compress(Bitmap.CompressFormat.PNG, 100, stream);
                 byte[] byteArray = stream.toByteArray();
                 i.putExtra("id", byteArray);
+
+                ByteArrayOutputStream stream2 = new ByteArrayOutputStream();
+                images[1].compress(Bitmap.CompressFormat.PNG, 100, stream2);
+                byte[] byteArray2 = stream2.toByteArray();
+                i.putExtra("id2", byteArray2);
+
+                ByteArrayOutputStream stream3 = new ByteArrayOutputStream();
+                images[2].compress(Bitmap.CompressFormat.PNG, 100, stream3);
+                byte[] byteArray3 = stream3.toByteArray();
+                i.putExtra("id3", byteArray3);
                 context.startActivity(i);
             }
         });
@@ -72,6 +83,6 @@ public class MyCustomAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        container.removeView((LinearLayout) object);
+        container.removeView((RelativeLayout) object);
     }
 }

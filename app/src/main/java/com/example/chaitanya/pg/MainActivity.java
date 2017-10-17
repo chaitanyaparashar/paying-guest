@@ -55,13 +55,16 @@ public class MainActivity extends AppCompatActivity
     JSONArray code;
     JSONArray code2;
     Bitmap [] imageid;
+    Bitmap [] imageid2;
+    Bitmap [] imageid3;
     private ProgressDialog pDialog;
     Bitmap decodedByte;
+    Bitmap decodedByte2;
+    Bitmap decodedByte3;
     String newcode;
     JSONParser jParser = new JSONParser();
 
     private static String url ="https://podgier-woman.000webhostapp.com/pgtable.php";
-    private static String url2 ="https://podgier-woman.000webhostapp.com/apptable.php";
 
     RecyclerView.LayoutManager recyclerViewLayoutManager;
 
@@ -111,9 +114,7 @@ public class MainActivity extends AppCompatActivity
 
 
             JSONObject json = jParser.makeHttpRequest(url, "GET", pr);
-            JSONObject json2 = jParser.makeHttpRequest(url2, "GET", pr);
             Log.d("jaaaaaaaaaaaaaaaakkk",""+countt);
-            Log.d("hhhhhhhhhhhhhhhhee", " " + json);
             try {
                 if(countt == 1){
                     Bundle b = getIntent().getExtras();
@@ -123,7 +124,6 @@ public class MainActivity extends AppCompatActivity
 
                 if (countt == 0) {
                     code = json.getJSONArray("code");
-                    code2 = json2.getJSONArray("code");
                     name = new String[code.length()];
                     address = new String[code.length()];
                     price = new String[code.length()];
@@ -135,6 +135,8 @@ public class MainActivity extends AppCompatActivity
                     wifi = new String[code.length()];
                     mobileno = new String[code.length()];
                     imageid = new Bitmap[code.length()];
+                    imageid2 = new Bitmap[code.length()];
+                    imageid3 = new Bitmap[code.length()];
                     Log.d("codeeee ",""+code2);
 
                     for (int i = 0; i < code.length(); i++) {
@@ -142,6 +144,8 @@ public class MainActivity extends AppCompatActivity
                         //Log.d("codeeee "+i,c.toString());
                         //Log.d("struat", c.getString("base64"));
                         final String encodedString = c.getString("base64");
+                        final String encodedString2 = c.getString("base642");
+                        final String encodedString3 = c.getString("base643");
                         name[i] = c.getString("name");
                         address[i] = c.getString("address");
                         price[i] = c.getString("price");
@@ -153,10 +157,24 @@ public class MainActivity extends AppCompatActivity
                         wifi[i] = c.getString("wifi");
                         mobileno[i] = c.getString("mobileno");
 
+
                         final String pureBase64Encoded = encodedString.substring(encodedString.indexOf(",") + 1);
                         byte[] decodedString = Base64.decode(pureBase64Encoded, Base64.DEFAULT);
                         decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
                         imageid[i] = decodedByte;
+                        Log.d("ssssssssssssss1",""+imageid[i]);
+
+                        final String pureBase64Encoded2 = encodedString2.substring(encodedString2.indexOf(",") + 1);
+                        byte[] decodedString2 = Base64.decode(pureBase64Encoded2, Base64.DEFAULT);
+                        decodedByte2 = BitmapFactory.decodeByteArray(decodedString2, 0, decodedString2.length);
+                        imageid2[i] = decodedByte2;
+                        Log.d("ssssssssssssss2",""+imageid2[i]);
+
+                        final String pureBase64Encoded3 = encodedString3.substring(encodedString3.indexOf(",") + 1);
+                        byte[] decodedString3 = Base64.decode(pureBase64Encoded3, Base64.DEFAULT);
+                        decodedByte3 = BitmapFactory.decodeByteArray(decodedString3, 0, decodedString3.length);
+                        imageid3[i] = decodedByte3;
+                        Log.d("ssssssssssssss3",""+imageid3[i]);
 
 
                     }
@@ -179,6 +197,8 @@ public class MainActivity extends AppCompatActivity
                         //Log.d("codeeee "+i,c.toString());
                         //Log.d("struat", c.getString("base64"));
                         final String encodedString = d.getString("base64");
+                        final String encodedString2 = d.getString("base642");
+                        final String encodedString3 = d.getString("base643");
                         name[i] = d.getString("name");
                         address[i] = d.getString("address");
                         price[i] = d.getString("price");
@@ -195,6 +215,17 @@ public class MainActivity extends AppCompatActivity
                         decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
                         imageid[i] = decodedByte;
 
+                        final String pureBase64Encoded2 = encodedString2.substring(encodedString2.indexOf(",") + 1);
+                        byte[] decodedString2 = Base64.decode(pureBase64Encoded2, Base64.DEFAULT);
+                        decodedByte2 = BitmapFactory.decodeByteArray(decodedString2, 0, decodedString2.length);
+                        imageid2[i] = decodedByte2;
+
+
+                        final String pureBase64Encoded3 = encodedString3.substring(encodedString3.indexOf(",") + 1);
+                        byte[] decodedString3 = Base64.decode(pureBase64Encoded3, Base64.DEFAULT);
+                        decodedByte3 = BitmapFactory.decodeByteArray(decodedString3, 0, decodedString3.length);
+                        imageid3[i] = decodedByte3;
+
                     }
 
 
@@ -208,7 +239,7 @@ public class MainActivity extends AppCompatActivity
 
         protected void onPostExecute(String file_url) {
             pDialog.dismiss();
-                recyclerView_Adapter = new RecyclerViewAdapter(context, address, price, name, imageid);
+                recyclerView_Adapter = new RecyclerViewAdapter(context, address, price, name, imageid,imageid2,imageid3);
                 recyclerView.invalidate();
                 recyclerView_Adapter.notifyDataSetChanged();
                 recyclerView.setAdapter(recyclerView_Adapter);

@@ -15,7 +15,7 @@ import android.widget.Button;
 
 public class Pgdata extends AppCompatActivity implements View.OnClickListener {
     ViewPager viewPager;
-    Bitmap bmp;
+    Bitmap[] bmp;
     MyCustomAdapter myCustomPagerAdapter;
     Button b1, b2;
 
@@ -23,8 +23,16 @@ public class Pgdata extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pgdata);
+        bmp = new Bitmap[3];
         byte[] byteArray = getIntent().getByteArrayExtra("id");
-        bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+        bmp[0] = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+
+        byte[] byteArray2 = getIntent().getByteArrayExtra("id2");
+        bmp[1] = BitmapFactory.decodeByteArray(byteArray2, 0, byteArray2.length);
+
+        byte[] byteArray3 = getIntent().getByteArrayExtra("id3");
+        bmp[2] = BitmapFactory.decodeByteArray(byteArray3, 0, byteArray3.length);
+
         b1 = (Button) findViewById(R.id.btt1);
         b2 = (Button) findViewById(R.id.btt2);
         b1.setOnClickListener(this);
@@ -46,11 +54,11 @@ public class Pgdata extends AppCompatActivity implements View.OnClickListener {
         int id = view.getId();
         switch (id) {
             //prev button
-            case R.id.btt2:
+            case R.id.btt1:
                 viewPager.setCurrentItem(viewPager.getCurrentItem() - 1, true);
                 break;
             //nextbutton, 1st argument : pageindex, 2nd argument : Enable smooth
-            case R.id.btt1:
+            case R.id.btt2:
                 viewPager.setCurrentItem(viewPager.getCurrentItem() + 1, true);
                 break;
         }

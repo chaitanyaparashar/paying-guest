@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -28,18 +30,22 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private String[] address;
     private String[] price;
     private Bitmap[] imageid;
+    private Bitmap[] imageid2;
+    private Bitmap[] imageid3;
     private Context context1;
     public ImageView img;
     TextView tx1;
     TextView tx2;
     TextView tx3;
-    public RecyclerViewAdapter(Context context2,String[] address,String[] price,String[] name,Bitmap[] imageid){
+    public RecyclerViewAdapter(Context context2,String[] address,String[] price,String[] name,Bitmap[] imageid,Bitmap[] imageid2,Bitmap[] imageid3){
 
         this.name = name;
         this.address = address;
         this.price = price;
         this.name = name;
         this.imageid = imageid;
+        this.imageid2 = imageid2;
+        this.imageid3 = imageid3;
         context1 = context2;
     }
 
@@ -78,6 +84,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         tx1.setText(""+address[position]+"");
         tx2.setText(""+price[position]+"");
         tx3.setText(""+name[position]+"");
+        setFadeAnimation(Vholder.itemView);
         Vholder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,13 +92,30 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 imageid[position].compress(Bitmap.CompressFormat.PNG, 100, stream);
                 byte[] byteArray = stream.toByteArray();
 
+
+                ByteArrayOutputStream stream2 = new ByteArrayOutputStream();
+                imageid2[position].compress(Bitmap.CompressFormat.PNG, 100, stream2);
+                byte[] byteArray2 = stream2.toByteArray();
+
+                ByteArrayOutputStream stream3 = new ByteArrayOutputStream();
+                imageid3[position].compress(Bitmap.CompressFormat.PNG, 100, stream3);
+                byte[] byteArray3 = stream3.toByteArray();
+
               Intent i = new Intent(context1,Pgdata.class);
                 i.putExtra("position",position);
                 i.putExtra("id", byteArray);
+                i.putExtra("id2", byteArray2);
+                i.putExtra("id3", byteArray3);
                 context1.startActivity(i);
             }
         });
 
+    }
+
+    private void setFadeAnimation(View view) {
+        AlphaAnimation anim = new AlphaAnimation(0.0f, 1.0f);
+        anim.setDuration(1000);
+        view.startAnimation(anim);
     }
 
     @Override

@@ -27,20 +27,27 @@ import android.widget.Toast;
 
 public class SwipeActivity extends Activity
 {
-    Bitmap bmp;
+    Bitmap[] bmp;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.swipe_view);
         RelativeLayout rl = (RelativeLayout) findViewById(R.id.rl);
-
+        bmp = new Bitmap[3];
         // get intent data
         Intent i = getIntent();
 
         // Selected image id
         byte[] byteArray = getIntent().getByteArrayExtra("id");
-        bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+
+        bmp[0] = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+
+        byte[] byteArray2 = getIntent().getByteArrayExtra("id2");
+        bmp[1] = BitmapFactory.decodeByteArray(byteArray2, 0, byteArray2.length);
+
+        byte[] byteArray3 = getIntent().getByteArrayExtra("id3");
+        bmp[2] = BitmapFactory.decodeByteArray(byteArray3, 0, byteArray3.length);
         int position = i.getExtras().getInt("position");
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpg);
@@ -65,7 +72,7 @@ public class SwipeActivity extends Activity
         public int getCount()
         {
             //return icons.length();
-            return 1;
+            return bmp.length;
         }
 
         @Override
@@ -102,7 +109,7 @@ public class SwipeActivity extends Activity
             // Apply the new width for ImageView programmatically
 
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-            imageView.setImageBitmap(bmp);
+            imageView.setImageBitmap(bmp[position]);
             ((ViewPager) container).addView(imageView, 0);
             return imageView;
         }
